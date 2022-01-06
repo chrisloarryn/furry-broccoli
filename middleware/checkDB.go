@@ -1,9 +1,9 @@
-package middlew
+package middleware
 
 import (
 	"net/http"
 
-	"github.com/ccontreras/furry-broccoli/bd"
+	"github.com/chrisloarryn/furry-broccoli/bd"
 )
 
 func CheckDB(next http.HandlerFunc) http.HandlerFunc {

@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/ccontreras/furry-broccoli/bd"
+	"github.com/chrisloarryn/furry-broccoli/bd"
 	"github.com/gorilla/mux"
 )
 

@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/ccontreras/furry-broccoli/models"
+	"github.com/chrisloarryn/furry-broccoli/models"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

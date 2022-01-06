@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/ccontreras/furry-broccoli/bd"
-	"github.com/ccontreras/furry-broccoli/models"
+	"github.com/chrisloarryn/furry-broccoli/bd"
+	"github.com/chrisloarryn/furry-broccoli/models"
 )
 
 // SaveBeer is for saving url handled

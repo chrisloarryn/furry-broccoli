@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/ccontreras/furry-broccoli/bd"
+	"github.com/chrisloarryn/furry-broccoli/bd"
 )
 
 // SearchBeers for reading tweets

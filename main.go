@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/ccontreras/furry-broccoli/bd"
-	"github.com/ccontreras/furry-broccoli/handlers"
+	"github.com/chrisloarryn/furry-broccoli/bd"
+	"github.com/chrisloarryn/furry-broccoli/handlers"
 )
 
 func main() {

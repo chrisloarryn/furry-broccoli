@@ -1,4 +1,4 @@
-module github.com/ccontreras/furry-broccoli
+module github.com/chrisloarryn/furry-broccoli
 
 go 1.16
 
