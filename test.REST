@@ -1,0 +1,37 @@
+###
+
+@baseURL = http://localhost:8080/api/v1
+@name = "test"
+@description = "test"
+@brewery = "test"
+@country = "test"
+@price= "10"
+@currency = "test"
+@beerID = 4
+
+
+### get beer by id
+GET {{ baseURL }}/beers/{{ beerID }} HTTP/1.1
+
+### get box price by beer id
+GET {{ baseURL }}/beers/{{ beerID }}/boxprice?currency=CLP&qty= HTTP/1.1
+
+
+### get all beers
+GET {{ baseURL }}/beers HTTP/1.1
+
+
+### save beer
+POST {{ baseURL }}/beers HTTP/1.1
+Content-Type: application/json
+
+{
+  "beerId": 4,
+  "name": "beer 1",
+  "brewery": "brewery 1",
+  "country": "country 1",
+  "price": 10.5,
+  "currency": "currency 1"
+}
+
+###
