@@ -10,7 +10,7 @@ import (
 
 // MongoCN is the connection object
 var MongoCN = ConnectBD()
-var clientOptions = options.Client().ApplyURI("mongodb+srv://chrisloarryn:ltbGMTpNQuugHBH3@cluster0.wvkde.mongodb.net/test?authSource=admin&replicaSet=atlas-ngcg07-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true")
+var clientOptions = options.Client().ApplyURI("mongodb+srv://chrisloarryn:ltbGMTpNQuugHBH3@mflix.egmqj.mongodb.net/test?authSource=admin&replicaSet=atlas-ngcg07-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true")
 
 // ConnectBD is the method that returns the client
 func ConnectBD() *mongo.Client {
