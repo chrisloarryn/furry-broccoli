@@ -3,7 +3,6 @@ package bd
 import (
 	"context"
 	"fmt"
-	"go.mongodb.org/mongo-driver/mongo/options"
 	"time"
 
 	"github.com/ccontreras/furry-broccoli/models"
@@ -27,18 +26,18 @@ func FindListingAndReviewId(searchID string) (models.ListingAndReview, error) {
 	// "_id": objID,
 
 	// mongodb options
-	findOptions := options.FindOne()
-	findOptions.SetProjection(bson.M{
-		"_id":      1,
-		"name":     1,
-		"location": 1,
-		"price":    1,
-	})
+	//findOptions := options.FindOne()
+	//findOptions.SetProjection(bson.M{
+	//	"_id":      1,
+	//	"name":     1,
+	//	"location": 1,
+	//	"price":    1,
+	//})
 	//"description": 1,
 	//"available": 1, "bedrooms": 1, "bathrooms": 1, "maxguests": 1, "owner": 1,
 	//"reviews": 1,
 
-	err := col.FindOne(ctx, condition, findOptions).Decode(&searches)
+	err := col.FindOne(ctx, condition).Decode(&searches)
 	fmt.Printf("Entry not found %v", condition)
 
 	if err != nil {
