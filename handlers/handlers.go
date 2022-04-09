@@ -24,7 +24,7 @@ func Handlers() {
 	apiCreate.HandleFunc("/beers/{beerId:[0-9]+}/boxprice", middlew.CheckDB(routers.BoxBeerPriceByBeerId)).Methods(http.MethodGet)
 
 	// listings -> api/v1/listings
-	apiCreate.HandleFunc("/listings", middlew.CheckDB(routers.SearchListingAndReview)).Methods(http.MethodGet)
+	apiCreate.HandleFunc("/listings", routers.SearchListingAndReview).Methods(http.MethodGet)
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
