@@ -2,7 +2,6 @@ package bd
 
 import (
 	"context"
-	"fmt"
 	"time"
 
 	"github.com/ccontreras/furry-broccoli/models"
@@ -38,10 +37,10 @@ func FindListingAndReviewId(searchID string) (models.ListingAndReview, error) {
 	//"reviews": 1,
 
 	err := col.FindOne(ctx, condition).Decode(&searches)
-	fmt.Printf("Entry not found %v", condition)
+	//fmt.Printf("Entry %v", condition)
 
 	if err != nil {
-		fmt.Println("Entry not found " + err.Error())
+		//fmt.Println("Entry not found " + err.Error())
 		return searches, err
 	}
 
