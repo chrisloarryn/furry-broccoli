@@ -16,12 +16,15 @@ func Handlers() {
 	router := mux.NewRouter()
 
 	apiCreate := router.PathPrefix("/api/v1").Subrouter()
-	
+
 	// Routes for the beers -> api/v1/beers
 	apiCreate.HandleFunc("/beers", middlew.CheckDB(routers.SearchBeers)).Methods(http.MethodGet)
 	apiCreate.HandleFunc("/beers", middlew.CheckDB(routers.SaveBeer)).Methods(http.MethodPost)
 	apiCreate.HandleFunc("/beers/{beerId:[0-9]+}", middlew.CheckDB(routers.SearchBeerByBeerId)).Methods(http.MethodGet)
 	apiCreate.HandleFunc("/beers/{beerId:[0-9]+}/boxprice", middlew.CheckDB(routers.BoxBeerPriceByBeerId)).Methods(http.MethodGet)
+
+	// listings -> api/v1/listings
+	apiCreate.HandleFunc("/listings", middlew.CheckDB(routers.SearchListingAndReview)).Methods(http.MethodGet)
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
